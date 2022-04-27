@@ -1,0 +1,23 @@
+{% extends "users/layout.html" %}
+
+{% block body %}
+
+    <h1>Welcome, {{ request.user.first_name }}</h1>
+
+    <ul>
+        <li>
+            Username: {{ request.user.usernamec}}
+        </li>
+        <li>
+            Que 1. How many states are there in India?
+        </li>
+    </ul>
+    <form action="{% url 'ques2' %}">
+        {% csrf_token %}
+        <input type="text" name="ans1" placeholder="Answer">
+        <input type="submit" value="Next">
+    </form>
+
+    <a href="{% url 'logout' %}">Logout and exit.</a>
+
+{% endblock %}
