@@ -47,7 +47,7 @@ def logout_view(request):
     })
 
 def register(request):
-    pass
+    return render(request, "users/register.html")
 
 def ques2(request):
     if request.GET:
