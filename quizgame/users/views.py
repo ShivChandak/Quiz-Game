@@ -46,9 +46,6 @@ def logout_view(request):
         "message": "Logged Out."
     })
 
-def register(request):
-    return render(request, "users/register.html")
-
 def ques2(request):
     if request.GET:
         ans = request.POST.get("ans1")
