@@ -1,0 +1,17 @@
+{% extends "users/layout.html" %}
+
+{% block body %}
+
+    <ul>
+        <li>
+            Which city is the capital of India?
+        </li>
+        <li>
+            <form action="{% url 'ques3' %}">
+                <input type="text" name="ans2" placeholder="Answer">
+                <input type="submit" value="Next">
+            </form>
+        </li>
+    </ul>
+
+{% endblock %}
