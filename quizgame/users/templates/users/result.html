@@ -1,0 +1,13 @@
+{% extends "users/layout.html" %}
+
+{% block body %}
+
+    {% if result %}
+        <h1>Score: {{ Score }}</h1>
+    {% endif %}
+    <div>End!</div>
+    <div>
+        <a href="{% url 'index' %}">Home.</a>
+    </div>
+
+{% endblock %}
