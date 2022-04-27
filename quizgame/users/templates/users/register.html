@@ -2,16 +2,16 @@
 
 {% block body %}
 
-    <ul>
-        <li>
-            Which city is the capital of India?
-        </li>
-        <li>
-            <form action="{% url 'ques3' %}">
-                <input type="text" name="ans2" placeholder="Answer">
-                <input type="submit" value="Next">
-            </form>
-        </li>
-    </ul>
+<!--{% load crispy_forms_tags %}-->
+
+<!--Register-->
+<div class="container py-5">
+	<h1>Register</h1>
+	<form method="POST">
+		{% csrf_token %}
+		{{ register_form }}
+	</form>
+	<p>If you already have an account, <a href="/login">login</a> instead.</p>
+</div>
 
 {% endblock %}
